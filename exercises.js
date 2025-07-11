@@ -17,7 +17,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   */
 
   // Modify the line of code BELOW to run a different exercise
-  exercise_09();
+  exercise_10();
   // Modify the line of code ABOVE to run a different exercise
 }
 
@@ -276,7 +276,11 @@ function exercise_10() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let longnum = 26.70156452;
+
+  let twodigits = longnum.toFixed(2);
+
+  console.log(twodigits);
 
   // CODE IN THE OPEN LINES ABOVE
 }
