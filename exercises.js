@@ -1,4 +1,5 @@
 import { fileURLToPath } from "url";
+import { isTypedArray } from "util/types";
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   /*
@@ -17,7 +18,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   */
 
   // Modify the line of code BELOW to run a different exercise
-  exercise_09();
+  exercise_19();
   // Modify the line of code ABOVE to run a different exercise
 }
 
@@ -276,7 +277,11 @@ function exercise_10() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let longnum = 26.70156452;
+
+  let twodigits = longnum.toFixed(2);
+
+  console.log(twodigits);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -298,7 +303,15 @@ function exercise_11() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let largeNum = 11261987.05;
+
+  let usFormatter = new Intl.NumberFormat("en-US");
+
+  let formatLargeNum = usFormatter.format(largeNum);
+
+  console.log(formatLargeNum);
+
+  console.log(largeNum);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -323,7 +336,15 @@ function exercise_12() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let salary = 65429;
+
+  let usFormatter = new Intl.NumberFormat(`en-US`, {style: "currency", currency: "USD"});
+
+  let convertedSalary = usFormatter.format(salary);
+
+  console.log(salary);
+
+  console.log(convertedSalary);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -348,7 +369,15 @@ function exercise_13() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let salary = 75456;
+
+  let japanFmat = new Intl.NumberFormat(`ja-JP`, {style: "currency", currency: "JPY"});
+
+  let newSalary = japanFmat.format(salary);
+
+  console.log(salary);
+
+  console.log(newSalary);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -368,7 +397,11 @@ function exercise_14() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let date1 = new Date("1987-11-26");
+
+  console.log(date1.toDateString());
+
+  console.log(date1.toTimeString());
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -390,7 +423,12 @@ function exercise_15() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let date1 = new Date("1987-11-26");
+
+  console.log(date1.toLocaleDateString('en-US'));
+
+  console.log(date1.toLocaleDateString('en-GB'));
+
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -408,7 +446,13 @@ function exercise_16() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  try {
+	
+	const dataObj = JSON.parse(rawData);
+} catch (err) {
+	console.log(`Error Name: ${err.name}`);
+	console.log(`Error Message: ${err.message}`);
+}
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -425,7 +469,15 @@ function exercise_17() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let booboo = true;
+
+  let newboo = String(booboo);
+
+  console.log(newboo);
+
+  console.log(typeof(newboo));
+
+  console.log(typeof(booboo));
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -461,7 +513,27 @@ function exercise_18() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let num1 = 123456789.26;
+
+  let usFormatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
+
+  let japanFormatter = new Intl.NumberFormat("ja-JP", {
+    style: "currency",
+    currency: "JPY",
+  });
+
+  let russiaFormatter = new Intl.NumberFormat("ru-RU", {
+    style: "currency",
+    currency: "RUB",
+  });
+
+
+  console.log(usFormatter.format(num1), japanFormatter.format(num1), russiaFormatter.format(num1));
+
+
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -483,7 +555,15 @@ function exercise_19() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let today = new Date();
+
+  let future = new Date(2025, 10, 26);
+
+  let diffTime = future - today;
+
+  let diffDay = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+  console.log(diffDay);
 
   // CODE IN THE OPEN LINES ABOVE
 }
