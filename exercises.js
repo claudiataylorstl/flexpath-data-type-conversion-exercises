@@ -17,7 +17,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   */
 
   // Modify the line of code BELOW to run a different exercise
-  exercise_01();
+  exercise_09();
   // Modify the line of code ABOVE to run a different exercise
 }
 
@@ -37,10 +37,19 @@ function exercise_01() {
 		3. Then, using the `typeof` keyword, log the type of each variable (including the unassigned one) to the console
   
   */
+  let variable1 = "String";
+  let variable2 = 26;
+  let variable3 = true;
+  let variable4 = {
+    attribute: "a value",
+  };
 
+  let nothing;
+
+  console.log(typeof(variable1),typeof(variable2),typeof(variable3),typeof(variable4),typeof(nothing));
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -60,7 +69,11 @@ function exercise_02() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let myNumber = 26;
+
+  let myStringNumber = String(myNumber);
+
+  console.log(myStringNumber,typeof(myStringNumber));
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -82,7 +95,10 @@ function exercise_03() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let number1 = 1;
+  let number2 = 0;
+
+  console.log(Boolean(number1),Boolean(number2));
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -101,7 +117,11 @@ function exercise_04() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let numstring = "one";
+
+  let stringNum = Number(numstring);
+
+  console.log(isNaN(stringNum));
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -122,7 +142,13 @@ function exercise_05() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let age = 37;
+
+  let words = `I am ${age} years old`;
+
+  console.log(words);
+
+  console.log(typeof(words));
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -148,7 +174,13 @@ function exercise_06() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let firstWay = name + " has " + String(number) + " apples";
+
+  let secondWay = `${name} has ${number} apples`;
+
+  console.log(firstWay,secondWay);
+
+  console.log(typeof(firstWay),typeof(secondWay));
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -166,7 +198,15 @@ function exercise_07() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let obj = {
+    value: "value",
+    value2: "values",
+  };
+
+  let jsonObj = JSON.stringify(obj);
+
+  console.log(obj);
+  console.log(jsonObj);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -189,7 +229,9 @@ function exercise_08() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let converObj = JSON.parse(jsonStringToParse);
+
+  console.log(converObj.name);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -209,8 +251,13 @@ function exercise_09() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let decimalNum = 75.123456;
 
+  console.log(Math.round(decimalNum));
+  console.log(Math.ceil(decimalNum));
+  console.log(Math.floor(decimalNum))
+  
+  ;
   // CODE IN THE OPEN LINES ABOVE
 }
 
